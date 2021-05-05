@@ -1,0 +1,8 @@
+{
+  "name": "bntech",
+  "template": "PWA",
+  "isConfigured": {
+    "client": true,
+    "server": true
+  }
+}
