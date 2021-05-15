@@ -10,8 +10,9 @@ router.get('/', (req, res) => {
 
 let controllers = require('../controllers/controllers');
 
-router.get('/fakeprobe', controllers.index);
-router.get('/filtering/:value', controllers.filter);
+router.get('/addfakeprobe', controllers.add);
+router.get('/fakeprobe', controllers.findAll);
+router.get('/fakeprobedate/:date', controllers.findByDate);
 router.post('/user', controllers.newuser);
 router.patch('/user/:id', controllers.edituser);
 
