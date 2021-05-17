@@ -19,8 +19,6 @@ exports.findByDate = async function (req, res, next) {
   let startDate = moment(req.params.date, 'YYYY-MM-DD').set({"hour": 0, "minute": 0, "second": 0});
   let endDate = moment(req.params.date, 'YYYY-MM-DD').set({"hour": 23, "minute": 59, "second": 59});
   Data.find({ date: { $gte: startDate, $lte: endDate }}, function(error, data){
-    console.log(error)
-    console.log(data)
     if (error) {
       res.status(404).json(error);
     } else {
